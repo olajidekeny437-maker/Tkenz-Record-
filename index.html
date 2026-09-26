@@ -3,103 +3,193 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Tkenz Record | Official</title>
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:#080808;color:#fff}
-nav{position:fixed;top:0;width:100%;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:12px 6%;background:rgba(0,0,0,.92);backdrop-filter:blur(10px);border-bottom:1px solid #292929}
-.logo img{width:125px;height:48px;object-fit:contain}
-nav ul{display:flex;gap:24px;list-style:none}
-nav a{color:#fff;text-decoration:none;font-size:14px}
-nav a:hover{color:#d8b24c}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 20px 50px;background:linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.88)),url("images/tkenz-photo.jpg") center/cover no-repeat}
-.hero h1{font-size:clamp(42px,10vw,90px);letter-spacing:6px}
-.hero h1 span{color:#d8b24c}
-.hero p{margin:18px 0 28px;letter-spacing:4px;color:#eee}
-.btn{display:inline-block;padding:13px 25px;margin:5px;border:1px solid #d8b24c;border-radius:30px;color:#fff;text-decoration:none;transition:.25s}
-.btn:hover{background:#d8b24c;color:#000}
-section{padding:80px 6%}
-.title{text-align:center;margin-bottom:40px}
-.title h2{font-size:34px;margin-bottom:8px}
-.title p{color:#999}
-.release{max-width:800px;margin:auto;background:#111;border:1px solid #292929;border-radius:20px;padding:35px;text-align:center}
-.release h3{font-size:34px;margin-bottom:8px}
-.release p{color:#aaa}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
-.card{background:#111;border:1px solid #292929;border-radius:18px;padding:25px;text-align:center}
-.card img{width:150px;height:150px;border-radius:50%;object-fit:cover;border:2px solid #d8b24c;margin-bottom:18px}
-.card h3{margin-bottom:8px}
-.card p{color:#999}
-.about{max-width:850px;margin:auto;text-align:center;color:#bbb;line-height:1.8;font-size:17px}
-.contact{text-align:center;background:#0d0d0d}
-footer{text-align:center;padding:28px;border-top:1px solid #222;color:#777}
-@media(max-width:700px){nav ul{display:none}nav{padding:12px 5%}.logo img{width:110px;height:44px}section{padding:65px 5%}}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: white;
+    line-height: 1.6;
+}
+
+header {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background:
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.9)),
+        radial-gradient(circle at center, #333, #080808 70%);
+}
+
+.hero {
+    max-width: 800px;
+}
+
+.logo {
+    font-size: 18px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #f5c542;
+}
+
+h1 {
+    font-size: clamp(48px, 12vw, 100px);
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #ccc;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #f5c542;
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    margin: 8px;
+    transition: .3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 70px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.music-card {
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 18px;
+    padding: 30px;
+    text-align: center;
+    max-width: 550px;
+    margin: auto;
+}
+
+.music-card h3 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.music-card p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.contact {
+    text-align: center;
+    background: #101010;
+    max-width: none;
+}
+
+.contact p {
+    color: #bbb;
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #050505;
+    color: #777;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    header {
+        min-height: 80vh;
+    }
+
+    section {
+        padding: 55px 18px;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+}
 </style>
 </head>
+
 <body>
 
-<nav>
-<a href="#home" class="logo"><img src="images/tkenz-logo.jpg" alt="Tkenz Record"></a>
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#music">Music</a></li>
-<li><a href="#artists">Artists</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
+<header>
+    <div class="hero">
+        <div class="logo">Tkenz Record</div>
 
-<section class="hero" id="home">
-<div>
-<h1>TKENZ <span>RECORD</span></h1>
-<p>MUSIC • PASSION • LEGACY</p>
-<a class="btn" href="#music">EXPLORE MUSIC</a>
-<a class="btn" href="#contact">CONTACT US</a>
-</div>
-</section>
+        <h1>Tkenz Record</h1>
 
-<section>
-<div class="title"><h2>Latest Release</h2><p>Listen to the latest music from Tkenz Record.</p></div>
-<div class="release">
-<h3>You Luv</h3><p>Tkenz</p>
-<a class="btn" target="_blank" href="https://open.spotify.com/album/1d2NVu06lj7NMTlJcUBQO">LISTEN ON SPOTIFY</a>
-</div>
-</section>
+        <p>
+            Official home of Tkenz — music, releases and everything Tkenz.
+        </p>
+
+        <a class="button" href="#music">Explore Music</a>
+        <a class="button" href="#contact">Contact Us</a>
+    </div>
+</header>
 
 <section id="music">
-<div class="title"><h2>Our Music</h2><p>Discover the sound of Tkenz Record.</p></div>
-<div class="grid">
-<div class="card"><h3>You Luv</h3><p>Tkenz</p><a class="btn" target="_blank" href="https://open.spotify.com/album/1d2NVu06lj7NMTlJcUBQO">LISTEN</a></div>
-<div class="card"><h3>Faraway</h3><p>Tkenz</p><a class="btn" href="#">COMING SOON</a></div>
-<div class="card"><h3>Tombo</h3><p>Tkenz</p><a class="btn" href="#">COMING SOON</a></div>
-<div class="card"><h3>Ifoma</h3><p>Tkenz</p><a class="btn" href="#">COMING SOON</a></div>
-</div>
+    <h2>Featured Music</h2>
+
+    <div class="music-card">
+        <h3>You Luv</h3>
+
+        <p>
+            Latest release from Tkenz.
+        </p>
+
+        <a
+            class="button"
+            href="https://ffm.to/your-luv-l7ef"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Listen Now 🎵
+        </a>
+    </div>
 </section>
 
-<section id="artists">
-<div class="title"><h2>Our Artist</h2><p>Tkenz — the sound behind the label.</p></div>
-<div class="grid">
-<div class="card">
-<img src="images/tkenz-photo.jpg" alt="Tkenz">
-<h3>Tkenz</h3><p>Artist • Songwriter • Performer</p>
-<a class="btn" href="#music">VIEW MUSIC</a>
-</div>
-</div>
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+
+    <p>For music, bookings and business enquiries</p>
+
+    <p>
+        <strong>Tkenz Record</strong>
+    </p>
 </section>
 
-<section id="about">
-<div class="title"><h2>About Tkenz Record</h2></div>
-<div class="about">
-<p>Tkenz Record is a music brand focused on creating, developing and promoting great music and emerging talent. Our vision is to build a strong African music brand with a sound and identity that connects with audiences around the world.</p>
-</div>
-</section>
+<footer>
+    © 2026 Tkenz Record. All rights reserved.
+</footer>
 
-<section class="contact" id="contact">
-<div class="title"><h2>Contact Tkenz Record</h2><p>For bookings, collaborations and business enquiries.</p></div>
-<a class="btn" href="mailto:tkenzrecord@gmail.com">EMAIL US</a>
-</section>
-
-<footer>© 2026 Tkenz Record. All Rights Reserved.</footer>
 </body>
 </html>
