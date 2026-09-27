@@ -2,21 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-  <meta name="description"
-        content="Tkenz Record - Music, Artists and Entertainment">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Tkenz Record | Music • Artists • Entertainment</title>
 
   <style>
-
-    /* =========================
-       RESET
-    ========================= */
-
     * {
       margin: 0;
       padding: 0;
@@ -29,9 +19,8 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #0b0b0b;
+      background: #080808;
       color: #ffffff;
-      line-height: 1.6;
     }
 
     a {
@@ -39,27 +28,22 @@
       color: inherit;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-
     /* =========================
        HEADER
     ========================= */
 
     header {
       background: #000000;
-      padding: 25px 20px;
       text-align: center;
-      border-bottom: 1px solid #222;
+      padding: 35px 20px;
     }
 
     .logo {
-      width: 170px;
+      width: 180px;
+      max-width: 80%;
       height: auto;
-      margin: 0 auto 15px;
+      margin: 0 auto 20px;
+      display: block;
     }
 
     .brand-name {
@@ -69,299 +53,276 @@
     }
 
     .tagline {
-      color: #bbbbbb;
-      margin-top: 5px;
-      font-size: 14px;
+      color: #aaa;
+      margin-top: 8px;
     }
-
 
     /* =========================
        NAVIGATION
     ========================= */
 
     nav {
-      background: #111111;
-      padding: 15px 10px;
+      background: #151515;
       text-align: center;
+      padding: 16px 10px;
       position: sticky;
       top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid #222;
+      z-index: 999;
+      border-bottom: 1px solid #333;
     }
 
     nav a {
       display: inline-block;
       margin: 5px 10px;
-      color: #ffffff;
       font-size: 14px;
       font-weight: bold;
-      transition: 0.3s;
     }
 
     nav a:hover {
       color: #d4af37;
     }
 
-
     /* =========================
-       GENERAL SECTIONS
+       ALL SECTIONS
     ========================= */
 
-    section {
-      padding: 70px 20px;
-      max-width: 1100px;
+    .page-section {
+      min-height: 80vh;
+      padding: 90px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section-content {
+      width: 100%;
+      max-width: 1000px;
       margin: auto;
     }
 
     .section-title {
       text-align: center;
-      font-size: 32px;
-      margin-bottom: 20px;
+      font-size: 38px;
+      margin-bottom: 15px;
     }
 
     .section-line {
-      width: 60px;
+      width: 70px;
       height: 3px;
       background: #d4af37;
-      margin: 0 auto 35px;
+      margin: 0 auto 40px;
     }
-
-    .section-text {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-      color: #cccccc;
-      font-size: 16px;
-    }
-
 
     /* =========================
-       HERO / HOME
+       HOME
     ========================= */
 
-    .hero {
-      min-height: 75vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    #home {
+      min-height: 85vh;
       text-align: center;
-      padding: 80px 20px;
-
-      background:
-        linear-gradient(
-          rgba(0,0,0,0.78),
-          rgba(0,0,0,0.88)
-        );
+      background: #080808;
     }
 
-    .hero-content {
+    .home-content {
       max-width: 850px;
+      margin: auto;
     }
 
-    .hero h1 {
-      font-size: 52px;
-      margin-bottom: 15px;
-      letter-spacing: 2px;
+    .home-content h1 {
+      font-size: 55px;
+      margin-bottom: 20px;
     }
 
-    .hero h1 span {
+    .home-content h1 span {
       color: #d4af37;
     }
 
-    .hero p {
-      color: #dddddd;
+    .home-content p {
+      color: #ccc;
       font-size: 19px;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     .button {
       display: inline-block;
+      padding: 14px 28px;
+      margin: 7px;
       background: #d4af37;
-      color: #000000;
-      padding: 13px 25px;
+      color: #000;
       border-radius: 5px;
       font-weight: bold;
-      margin: 6px;
-      transition: 0.3s;
     }
 
     .button:hover {
-      background: #ffffff;
-      transform: translateY(-2px);
+      background: #fff;
     }
 
-    .button-dark {
+    .button-outline {
       background: transparent;
-      color: #ffffff;
+      color: #fff;
       border: 1px solid #d4af37;
     }
-
-    .button-dark:hover {
-      background: #d4af37;
-      color: #000000;
-    }
-
 
     /* =========================
        ABOUT
     ========================= */
 
     #about {
-      background: #101010;
-      max-width: none;
+      background: #151515;
     }
 
-    .about-container {
-      max-width: 1000px;
+    .about-box {
+      max-width: 850px;
       margin: auto;
+      text-align: center;
+      color: #ccc;
+      font-size: 17px;
+      line-height: 1.9;
     }
-
 
     /* =========================
        OUR STORY
     ========================= */
 
     #story {
-      background: #0b0b0b;
+      background: #080808;
     }
 
     .story-box {
-      max-width: 900px;
+      max-width: 850px;
       margin: auto;
       background: #151515;
-      padding: 35px;
+      padding: 40px;
+      border: 1px solid #292929;
       border-radius: 10px;
-      border: 1px solid #242424;
     }
 
     .story-box p {
-      color: #cccccc;
-      margin-bottom: 18px;
+      color: #ccc;
       font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 20px;
     }
 
     .story-box p:last-child {
       margin-bottom: 0;
     }
 
-
     /* =========================
        ARTISTS
     ========================= */
 
     #artists {
-      background: #101010;
-      max-width: none;
-    }
-
-    .artists-container {
-      max-width: 1000px;
-      margin: auto;
+      background: #151515;
     }
 
     .artist-card {
-      background: #181818;
-      border: 1px solid #282828;
-      border-radius: 10px;
-      padding: 30px;
-      text-align: center;
-      max-width: 450px;
+      max-width: 500px;
       margin: auto;
+      padding: 40px 25px;
+      text-align: center;
+      background: #080808;
+      border: 1px solid #292929;
+      border-radius: 10px;
     }
 
     .artist-card h3 {
-      font-size: 27px;
-      margin-bottom: 10px;
+      font-size: 30px;
+      margin-bottom: 12px;
     }
 
     .artist-card p {
-      color: #bbbbbb;
+      color: #aaa;
     }
-
 
     /* =========================
        MUSIC
     ========================= */
 
+    #music {
+      background: #080808;
+    }
+
+    .music-intro {
+      text-align: center;
+      color: #ccc;
+      margin-bottom: 35px;
+    }
+
     .music-card {
-      max-width: 700px;
-      margin: 30px auto 0;
-      padding: 30px;
+      max-width: 650px;
+      margin: auto;
+      text-align: center;
+      padding: 40px 25px;
       background: #151515;
       border: 1px solid #292929;
       border-radius: 10px;
-      text-align: center;
     }
 
     .music-card h3 {
-      font-size: 28px;
+      font-size: 30px;
       margin-bottom: 10px;
     }
 
     .music-card p {
-      color: #bbbbbb;
+      color: #aaa;
       margin-bottom: 20px;
     }
-
 
     /* =========================
        CONTACT
     ========================= */
 
     #contact {
-      background: #101010;
-      max-width: none;
-    }
-
-    .contact-container {
-      max-width: 850px;
-      margin: auto;
+      background: #151515;
       text-align: center;
     }
 
-    .contact-container p {
-      color: #cccccc;
-      margin-bottom: 20px;
+    .contact-box {
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .contact-box p {
+      color: #ccc;
+      font-size: 17px;
+      margin-bottom: 25px;
     }
 
     .whatsapp {
       display: inline-block;
       background: #25D366;
-      color: white;
-      padding: 14px 25px;
+      color: #fff;
+      padding: 15px 28px;
       border-radius: 5px;
       font-weight: bold;
-      margin-top: 10px;
     }
 
     .whatsapp:hover {
       background: #1ebe5d;
     }
 
-
     /* =========================
        FOOTER
     ========================= */
 
     footer {
-      background: #000000;
+      background: #000;
       text-align: center;
-      padding: 30px 20px;
-      border-top: 1px solid #222;
+      padding: 35px 20px;
+    }
+
+    footer .footer-name {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 8px;
     }
 
     footer p {
-      color: #888888;
+      color: #777;
+      margin: 5px;
       font-size: 14px;
-      margin: 5px 0;
     }
-
-    .footer-brand {
-      color: #ffffff;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
 
     /* =========================
        MOBILE
@@ -373,39 +334,36 @@
         font-size: 24px;
       }
 
-      .hero {
-        min-height: 65vh;
-      }
-
-      .hero h1 {
+      .home-content h1 {
         font-size: 38px;
       }
 
-      .hero p {
+      .home-content p {
         font-size: 16px;
       }
 
       .section-title {
-        font-size: 28px;
+        font-size: 30px;
       }
 
-      nav a {
-        margin: 4px 7px;
-        font-size: 13px;
+      .page-section {
+        min-height: 75vh;
+        padding: 70px 18px;
       }
 
       .story-box {
         padding: 25px 20px;
       }
 
+      nav a {
+        margin: 4px 6px;
+        font-size: 13px;
+      }
     }
-
   </style>
 </head>
 
-
 <body>
-
 
   <!-- =========================
        HEADER
@@ -414,7 +372,7 @@
   <header>
 
     <img
-      src="tkenz-logo.jpg"
+      src="./tkenz-logo.jpg"
       alt="Tkenz Record Logo"
       class="logo"
     >
@@ -437,27 +395,22 @@
   <nav>
 
     <a href="#home">Home</a>
-
     <a href="#about">About Us</a>
-
     <a href="#story">Our Story</a>
-
     <a href="#artists">Artists</a>
-
     <a href="#music">Music</a>
-
     <a href="#contact">Contact</a>
 
   </nav>
 
 
   <!-- =========================
-       HOME
+       HOME SECTION
   ========================= -->
 
-  <section id="home" class="hero">
+  <section id="home" class="page-section">
 
-    <div class="hero-content">
+    <div class="home-content">
 
       <h1>
         Welcome to
@@ -469,7 +422,7 @@
       </p>
 
       <p>
-        Discover our sound, our artists and the journey
+        Discover our music, our artists and the story
         behind Tkenz Record.
       </p>
 
@@ -477,7 +430,7 @@
         Listen to Our Music
       </a>
 
-      <a href="#contact" class="button button-dark">
+      <a href="#contact" class="button button-outline">
         Contact Us
       </a>
 
@@ -487,12 +440,12 @@
 
 
   <!-- =========================
-       ABOUT US
+       ABOUT US SECTION
   ========================= -->
 
-  <section id="about">
+  <section id="about" class="page-section">
 
-    <div class="about-container">
+    <div class="section-content">
 
       <h2 class="section-title">
         About Us
@@ -500,71 +453,24 @@
 
       <div class="section-line"></div>
 
-      <p class="section-text">
+      <div class="about-box">
 
-        Tkenz Record is a music and entertainment brand
-        focused on creating, developing and promoting
-        talented artists and quality music.
+        <p>
+          Tkenz Record is a music and entertainment brand
+          focused on creating, developing and promoting
+          talented artists and quality music.
+        </p>
 
-        <br><br>
+        <br>
 
-        Our goal is to build a platform where creativity,
-        originality and passion can grow while connecting
-        our music with listeners in Nigeria and around
-        the world.
+        <p>
+          Our vision is to build a platform where creativity,
+          originality and passion can grow while connecting
+          our music with listeners in Nigeria and around
+          the world.
+        </p>
 
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       OUR STORY
-  ========================= -->
-
-  <section id="story">
-
-    <h2 class="section-title">
-      Our Story
-    </h2>
-
-    <div class="section-line"></div>
-
-    <div class="story-box">
-
-      <p>
-        Tkenz Record was created from a passion for music,
-        creativity and the desire to give talented artists
-        a platform to express themselves.
-      </p>
-
-      <p>
-        The journey behind Tkenz began with a love for
-        music and entertainment. From writing songs and
-        developing sounds to sharing music with listeners,
-        every step has been part of a bigger vision.
-      </p>
-
-      <p>
-        Tkenz represents creativity, determination and
-        the belief that great music can connect people
-        across different backgrounds and locations.
-      </p>
-
-      <p>
-        Today, Tkenz Record continues to develop its
-        identity as a growing music and entertainment
-        brand, with a focus on artists, original music
-        and meaningful entertainment experiences.
-      </p>
-
-      <p>
-        This is only the beginning. Our story is still
-        being written, and we invite you to be part of
-        the journey.
-      </p>
+      </div>
 
     </div>
 
@@ -572,12 +478,67 @@
 
 
   <!-- =========================
-       ARTISTS
+       OUR STORY SECTION
   ========================= -->
 
-  <section id="artists">
+  <section id="story" class="page-section">
 
-    <div class="artists-container">
+    <div class="section-content">
+
+      <h2 class="section-title">
+        Our Story
+      </h2>
+
+      <div class="section-line"></div>
+
+      <div class="story-box">
+
+        <p>
+          Tkenz Record was created from a passion for music,
+          creativity and the desire to give talented artists
+          a platform to express themselves.
+        </p>
+
+        <p>
+          The journey began with a love for music and
+          entertainment. From writing songs and developing
+          sounds to sharing music with listeners, every step
+          has been part of a bigger vision.
+        </p>
+
+        <p>
+          Tkenz represents creativity, determination and
+          the belief that great music can connect people
+          across different backgrounds and locations.
+        </p>
+
+        <p>
+          Today, Tkenz Record continues to develop its
+          identity as a growing music and entertainment
+          brand, focusing on artists, original music and
+          meaningful entertainment.
+        </p>
+
+        <p>
+          This is only the beginning. Our story is still
+          being written, and we invite you to be part of
+          the journey.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ARTISTS SECTION
+  ========================= -->
+
+  <section id="artists" class="page-section">
+
+    <div class="section-content">
 
       <h2 class="section-title">
         Our Artists
@@ -598,9 +559,9 @@
         <br>
 
         <p>
-          Tkenz brings a unique blend of African
-          sounds, melody and contemporary music
-          to listeners.
+          Tkenz brings African sounds, melody and
+          contemporary music together to create
+          a unique musical identity.
         </p>
 
       </div>
@@ -611,42 +572,43 @@
 
 
   <!-- =========================
-       MUSIC
+       MUSIC SECTION
   ========================= -->
 
-  <section id="music">
+  <section id="music" class="page-section">
 
-    <h2 class="section-title">
-      Our Music
-    </h2>
+    <div class="section-content">
 
-    <div class="section-line"></div>
+      <h2 class="section-title">
+        Our Music
+      </h2>
 
-    <p class="section-text">
+      <div class="section-line"></div>
 
-      Listen to music from Tkenz Record and discover
-      our latest releases.
-
-    </p>
-
-
-    <div class="music-card">
-
-      <h3>
-        You Luv
-      </h3>
-
-      <p>
-        Tkenz
+      <p class="music-intro">
+        Listen to music from Tkenz Record and discover
+        our latest releases.
       </p>
 
-      <a
-        href="https://open.spotify.com/album/1d2NVu06lj7NMTlJcUBQO"
-        target="_blank"
-        class="button"
-      >
-        Listen on Spotify
-      </a>
+      <div class="music-card">
+
+        <h3>
+          You Luv
+        </h3>
+
+        <p>
+          Tkenz
+        </p>
+
+        <a
+          href="https://open.spotify.com/album/1d2NVu06lj7NMTlJcUBQO"
+          target="_blank"
+          class="button"
+        >
+          Listen on Spotify
+        </a>
+
+      </div>
 
     </div>
 
@@ -654,31 +616,35 @@
 
 
   <!-- =========================
-       CONTACT
+       CONTACT SECTION
   ========================= -->
 
-  <section id="contact">
+  <section id="contact" class="page-section">
 
-    <div class="contact-container">
+    <div class="section-content">
 
-      <h2 class="section-title">
-        Contact Us
-      </h2>
+      <div class="contact-box">
 
-      <div class="section-line"></div>
+        <h2 class="section-title">
+          Contact Us
+        </h2>
 
-      <p>
-        For music, bookings, collaborations and
-        enquiries, connect with Tkenz Record.
-      </p>
+        <div class="section-line"></div>
 
-      <a
-        href="https://wa.me/2348112345890"
-        target="_blank"
-        class="whatsapp"
-      >
-        Contact Us on WhatsApp
-      </a>
+        <p>
+          For music, bookings, collaborations and
+          enquiries, connect with Tkenz Record.
+        </p>
+
+        <a
+          href="https://wa.me/2348112345890"
+          target="_blank"
+          class="whatsapp"
+        >
+          Contact Us on WhatsApp
+        </a>
+
+      </div>
 
     </div>
 
@@ -691,7 +657,7 @@
 
   <footer>
 
-    <p class="footer-brand">
+    <p class="footer-name">
       TKENZ RECORD
     </p>
 
@@ -704,7 +670,6 @@
     </p>
 
   </footer>
-
 
 </body>
 </html>
