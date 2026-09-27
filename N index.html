@@ -16,12 +16,12 @@
       font-family: Arial, sans-serif;
       background: #111;
       color: white;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     header {
       text-align: center;
-      padding: 30px 20px 20px;
+      padding: 30px 20px;
       background: #000;
     }
 
@@ -36,7 +36,6 @@
 
     header h1 {
       font-size: 32px;
-      margin-bottom: 5px;
       letter-spacing: 2px;
     }
 
@@ -56,7 +55,7 @@
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 10px;
+      margin: 0 8px;
       font-weight: bold;
     }
 
@@ -71,13 +70,10 @@
     }
 
     #home {
-      text-align: center;
-      background: linear-gradient(
-        rgba(0,0,0,0.75),
-        rgba(0,0,0,0.75)
-      );
       max-width: none;
-      padding: 100px 20px;
+      text-align: center;
+      padding: 110px 20px;
+      background: #151515;
     }
 
     #home h2 {
@@ -104,33 +100,31 @@
     }
 
     .story,
+    .about-box,
     .artist-card,
     .music-card,
     .contact-box {
       background: #1b1b1b;
       padding: 30px;
       border-radius: 12px;
-      margin-top: 20px;
     }
 
     .story h3,
+    .about-box h3,
     .artist-card h3,
     .music-card h3 {
       color: #f5c542;
-      margin: 25px 0 10px;
+      margin-bottom: 12px;
       font-size: 24px;
     }
 
-    .story h3:first-child {
-      margin-top: 0;
-    }
-
     .story p,
+    .about-box p,
     .artist-card p,
     .music-card p,
     .contact-box p {
       color: #ddd;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
     .button {
@@ -145,7 +139,7 @@
     }
 
     .button:hover {
-      background: #fff;
+      background: white;
     }
 
     #contact {
@@ -153,8 +147,8 @@
     }
 
     footer {
-      text-align: center;
       background: #000;
+      text-align: center;
       padding: 30px 20px;
       color: #aaa;
     }
@@ -174,7 +168,7 @@
 
       nav a {
         display: inline-block;
-        margin: 5px 7px;
+        margin: 5px 6px;
         font-size: 14px;
       }
 
@@ -183,6 +177,7 @@
       }
 
       .story,
+      .about-box,
       .artist-card,
       .music-card,
       .contact-box {
@@ -193,22 +188,23 @@
         width: 150px;
       }
     }
-  </style></head><body>  <!-- HEADER -->  <header><!-- YOUR TKENZ RECORD LOGO -->
-<img
+  </style></head><body>  <!-- HEADER -->  <header><img
   src="tkenz-logo.jpg"
   alt="Tkenz Record Logo"
   class="logo"
 >
 
 <h1>TKENZ RECORD</h1>
+
 <p>Music • Artists • Entertainment</p>
 
-  </header>  <!-- NAVIGATION -->  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About Us</a>
-    <a href="#artists">Artists</a>
-    <a href="#music">Music</a>
-    <a href="#contact">Contact</a>
+  </header>  <!-- NAVIGATION -->  <nav><a href="#home">Home</a>
+<a href="#about">About Us</a>
+<a href="#story">Our Story</a>
+<a href="#artists">Artists</a>
+<a href="#music">Music</a>
+<a href="#contact">Contact</a>
+
   </nav>  <!-- HOME -->  <section id="home"><h2>Welcome to Tkenz Record</h2>
 
 <p>
@@ -227,18 +223,36 @@
   </section>  <!-- ABOUT US -->  <section id="about"><h2 class="section-title">About Us</h2>
 
 <p class="section-intro">
-  Get to know the story, vision and journey behind Tkenz Record.
+  Get to know Tkenz Record and what we stand for.
+</p>
+
+<div class="about-box">
+
+  <h3>Who We Are</h3>
+
+  <p>
+    Tkenz Record is a music and entertainment brand built
+    around creativity, quality music and the development of
+    talented artists.
+  </p>
+
+  <p>
+    We are passionate about creating music that connects
+    with people while building a platform where artists
+    can grow and express themselves.
+  </p>
+
+</div>
+
+  </section>  <!-- OUR STORY -->  <section id="story"><h2 class="section-title">Our Story</h2>
+
+<p class="section-intro">
+  The journey behind Tkenz and Tkenz Record.
 </p>
 
 <div class="story">
 
-  <h3>Our Story</h3>
-
-  <p>
-    Tkenz Record is a music and entertainment brand built from
-    a passion for music, creativity and the desire to give
-    talented artists a platform to express themselves.
-  </p>
+  <h3>Where It Started</h3>
 
   <p>
     The story of Tkenz began with twins Taiye and Kehinde,
@@ -246,6 +260,8 @@
     Osun State, Nigeria, and were born and raised in Jos,
     Plateau State.
   </p>
+
+  <h3>The Journey</h3>
 
   <p>
     Their educational journey began at G.S.S. Garaku in
@@ -260,12 +276,13 @@
     enjoyed both in Nigeria and around the world.
   </p>
 
+  <h3>The Birth of Tkenz Record</h3>
+
   <p>
     Tkenz Record represents the next step in that journey —
     creating opportunities, supporting creativity and
     building a platform where music and talent can grow.
   </p>
-
 
   <h3>Our Vision</h3>
 
@@ -275,7 +292,6 @@
     artists and brings quality Nigerian music to audiences
     around the world.
   </p>
-
 
   <h3>Our Mission</h3>
 
@@ -287,7 +303,7 @@
 
 </div>
 
-  </section>  <!-- ARTISTS -->  <section id="artists"><h2 class="section-title">Our Artist</h2>
+  </section>  <!-- ARTISTS -->  <section id="artists"><h2 class="section-title">Our Artists</h2>
 
 <p class="section-intro">
   Meet the talent behind the sound of Tkenz Record.
@@ -299,9 +315,9 @@
 
   <p>
     Tkenz is a musical duo made up of twins Taiye and Kehinde.
-    Their sound draws inspiration from African music and modern
-    Afro-fusion, creating songs that connect with listeners
-    through melody, rhythm and storytelling.
+    Their sound draws inspiration from African music and
+    modern Afro-fusion, creating songs that connect with
+    listeners through melody, rhythm and storytelling.
   </p>
 
   <p>
