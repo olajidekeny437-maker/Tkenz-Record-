@@ -5,189 +5,422 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Tkenz Record</title>
+  <title>Tkenz Record | Official Music & Entertainment</title>
+
+  <meta name="description" content="Tkenz Record is a Nigerian music brand focused on creativity, original music, artist development and entertainment.">
 
   <style>
-    * {.logo {
-  width: 180px;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px;
-}
+    * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, sans-serif;
       background: #111;
       color: white;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     header {
-      text-align: center;
-      padding: 40px 20px 60px;
       background: #000;
+      text-align: center;
+      padding: 30px 20px;
+      border-bottom: 1px solid #333;
     }
 
-    header img {
+    .logo {
+      width: 180px;
+      max-width: 80%;
+      height: auto;
       display: block;
       margin: 0 auto 20px;
-      max-width: 220px;
-      width: 80%;
-      height: auto;
     }
 
     header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
+      font-size: 32px;
+      margin-bottom: 8px;
     }
 
     header p {
-      font-size: 18px;
-      opacity: 0.8;
+      color: #bbb;
+      font-size: 16px;
+    }
+
+    nav {
+      background: #181818;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 15px 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background: #333;
     }
 
     section {
-      max-width: 900px;
+      padding: 70px 20px;
+    }
+
+    .container {
+      max-width: 950px;
       margin: auto;
-      padding: 50px 20px;
+    }
+
+    .hero {
       text-align: center;
+      background: linear-gradient(#000, #151515);
+      padding: 90px 20px;
     }
 
-    h2 {
-      font-size: 30px;
+    .hero h2 {
+      font-size: 42px;
       margin-bottom: 20px;
     }
 
-    .music-card {
-      background: #1d1d1d;
-      padding: 30px 20px;
-      border-radius: 15px;
-      margin-top: 20px;
-    }
-
-    .music-card h3 {
-      font-size: 26px;
-      margin-bottom: 20px;
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: #ccc;
+      font-size: 18px;
     }
 
     .button {
       display: inline-block;
-      margin: 8px;
-      padding: 13px 22px;
-      border-radius: 30px;
       background: white;
       color: black;
       text-decoration: none;
+      padding: 13px 25px;
+      border-radius: 30px;
       font-weight: bold;
+      margin: 5px;
     }
 
     .button:hover {
-      opacity: 0.8;
+      background: #ddd;
     }
 
-    .about {
-      max-width: 700px;
-      margin: auto;
-      opacity: 0.9;
+    h2.section-title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+
+    .story,
+    .artist-card,
+    .music-card,
+    .contact-card {
+      background: #1b1b1b;
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      border: 1px solid #292929;
+    }
+
+    .story p {
+      margin-bottom: 18px;
+      color: #ddd;
+    }
+
+    .artist-card {
+      text-align: center;
+    }
+
+    .artist-card h3 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .artist-card p {
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+
+    .artist-name {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .music-card {
+      text-align: center;
+    }
+
+    .music-card h3 {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .music-card p {
+      color: #bbb;
+      margin-bottom: 20px;
+    }
+
+    .contact-card {
+      text-align: center;
+    }
+
+    .contact-card p {
+      margin-bottom: 15px;
+      color: #ccc;
+    }
+
+    .whatsapp {
+      display: inline-block;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      padding: 13px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      margin-top: 10px;
     }
 
     footer {
+      background: #000;
       text-align: center;
       padding: 30px 20px;
-      background: #000;
-      opacity: 0.8;
+      color: #888;
+      border-top: 1px solid #333;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 26px;
+      }
+
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      nav a {
+        font-size: 14px;
+        padding: 8px 10px;
+      }
+
+      section {
+        padding: 50px 15px;
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- HEADER -->
   <header>
+    <img src="tkenz-logo.jpg" alt="Tkenz Record Logo" class="logo">
 
-    <img
-      
-<img src="./tkenz-logo.jpg" alt="Tkenz Record Logo" class="logo">
     <h1>Tkenz Record</h1>
 
-    <p>
-      Official home of Tkenz music, releases and entertainment.
-    </p>
-
+    <p>Music • Artists • Creativity • Entertainment</p>
   </header>
 
 
-  <section id="music">
-
-    <h2>Latest Music</h2>
-
-    <div class="music-card">
-
-      <h3>You Luv</h3>
-
-      <a
-        class="button"
-        href="https://ffm.to/your-luv-l7ef"
-        target="_blank"
-        rel="noopener noreferrer">
-        Listen Now
-      </a>
-
-      <a
-        class="button"
-        href="https://open.spotify.com/album/1d2NVu06lj7NMTlJcUBQO"
-        target="_blank"
-        rel="noopener noreferrer">
-        Listen on Spotify
-      </a>
-
-    </div>
-
-  </section>
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#story">Our Story</a>
+    <a href="#artists">Artists</a>
+    <a href="#music">Our Music</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
 
-  <section id="about">
+  <!-- HOME -->
+  <section id="home" class="hero">
+    <div class="container">
 
-    <h2>About Tkenz</h2>
-
-    <div class="about">
+      <h2>Welcome to Tkenz Record</h2>
 
       <p>
-        Tkenz is a music act bringing together unique sound,
-        energy and creativity. Tkenz Record is the official home
-        for music, releases, projects and entertainment.
+        A growing Nigerian music brand dedicated to creativity,
+        original music, artist development and entertainment.
       </p>
 
+      <a href="#music" class="button">Listen to Our Music</a>
+
+      <a href="#artists" class="button">Meet Our Artist</a>
+
     </div>
-
   </section>
 
 
+  <!-- OUR STORY -->
+  <section id="story">
+    <div class="container">
+
+      <h2 class="section-title">Our Story</h2>
+
+      <div class="story">
+
+        <p>
+          Tkenz Record is a Nigerian music brand built around creativity,
+          originality and a passion for great music. Our vision is to create
+          music that connects with people and represents the energy and
+          creativity of Africa.
+        </p>
+
+        <p>
+          The story of Tkenz begins with twins Taiye and Kehinde, who perform
+          together as Tkenz. They hail from Ile-Ife, Osun State, Nigeria,
+          and were born and raised in Jos, Plateau State.
+        </p>
+
+        <p>
+          Their educational journey began at G.S.S. Garaku in Kokona
+          Local Government Area of Nasarawa State. Their journey later took
+          them to Lagos as they continued pursuing their dreams and developing
+          their passion for music.
+        </p>
+
+        <p>
+          Through their experiences, creativity and love for music, Tkenz
+          continues to build a unique sound that blends African influences
+          with modern music.
+        </p>
+
+        <p>
+          Tkenz Record was created with a bigger vision: to develop talent,
+          release quality music and build a lasting African entertainment
+          brand that can connect with listeners around the world.
+        </p>
+
+        <p>
+          <strong>
+            Our mission is simple: create music, develop talent and build
+            a lasting African music brand.
+          </strong>
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ARTISTS -->
+  <section id="artists">
+    <div class="container">
+
+      <h2 class="section-title">Our Artist</h2>
+
+      <div class="artist-card">
+
+        <div class="artist-name">TKENZ</div>
+
+        <h3>Taiye & Kehinde</h3>
+
+        <p>
+          Tkenz is a musical duo made up of twin brothers Taiye and Kehinde.
+          Together, they bring their individual personalities, experiences
+          and creativity into one musical identity.
+        </p>
+
+        <p>
+          Their sound is influenced by African music, Afropop, Afro-fusion
+          and contemporary Nigerian sounds, while their songwriting focuses
+          on relatable stories, emotions, love, life and everyday experiences.
+        </p>
+
+        <p>
+          As Tkenz, the twins continue to grow their artistry and share their
+          music with audiences in Nigeria and beyond.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- OUR MUSIC -->
+  <section id="music">
+    <div class="container">
+
+      <h2 class="section-title">Our Music</h2>
+
+      <div class="music-card">
+
+        <h3>You Luv</h3>
+
+        <p>
+          Listen to Tkenz on Spotify and discover our music.
+        </p>
+
+        <a
+          class="button"
+          href="https://open.spotify.com/album/1d2NVu06lj7NMTlJcUBQO"
+          target="_blank"
+          rel="noopener noreferrer">
+          Listen on Spotify
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
   <section id="contact">
+    <div class="container">
 
-    <h2>Contact</h2>
+      <h2 class="section-title">Contact Us</h2>
 
-    <p>
-      For music, bookings and enquiries, connect with Tkenz Record.
-    </p>
+      <div class="contact-card">
 
-    <a
-      class="button"
-      href="https://wa.me/2348112345890?text=Hello%20Tkenz%20Record%2C%20I%20would%20like%20to%20contact%20you."
-      target="_blank"
-      rel="noopener noreferrer">
-      WhatsApp Us
-    </a>
+        <p>
+          For music, bookings, collaborations and enquiries,
+          connect with Tkenz Record.
+        </p>
 
+        <p>
+          <strong>WhatsApp:</strong> +234 811 234 5890
+        </p>
+
+        <a
+          class="whatsapp"
+          href="https://wa.me/2348112345890"
+          target="_blank"
+          rel="noopener noreferrer">
+          Chat With Us on WhatsApp
+        </a>
+
+      </div>
+
+    </div>
   </section>
 
 
+  <!-- FOOTER -->
   <footer>
 
-    © 2026 Tkenz Record. All rights reserved.
+    <p>
+      © 2026 Tkenz Record. All Rights Reserved.
+    </p>
+
+    <p>
+      Music • Creativity • Entertainment
+    </p>
 
   </footer>
 
